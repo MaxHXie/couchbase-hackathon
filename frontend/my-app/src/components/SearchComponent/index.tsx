@@ -309,13 +309,7 @@ const SearchComponent = ({
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
     >
-      <div
-        className="searchBarContent"
-        style={{
-          paddingLeft:
-            parentComponent === "NavBar" && !focused ? "unset" : "4px",
-        }}
-      >
+      <div className="searchBarContent">
         <div className="searchBarContentLeft">
           <img
             src={SearchIcon}
@@ -323,7 +317,7 @@ const SearchComponent = ({
             className={`searchIcon inside${parentComponent} searchBarContentLeftIcon${
               hasTypedTextInSearchInput ? "Focused" : ""
             }`}
-            style={{ marginLeft: "4px", marginRight: "4px" }}
+            style={{ marginLeft: "24px", marginRight: "24px" }}
           />
           <input
             className={`searchInput inside${parentComponent}`}
