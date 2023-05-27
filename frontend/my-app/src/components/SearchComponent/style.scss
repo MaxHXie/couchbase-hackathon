@@ -28,7 +28,7 @@
     height: 100%;
 
     input.searchInput {
-      background: transparent;
+      background: var(--color-white);
       text-overflow: ellipsis;
       outline: none;
       border: none;

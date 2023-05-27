@@ -2,6 +2,7 @@ nav {
   background-color: var(--color-primary);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 22px; //CONST-KHU-332
   padding-bottom: 22px; //CONST-KHU-332
   height: var(--navbar-height);
@@ -11,7 +12,22 @@ nav {
   }
   transition: 300ms;
 }
+.icon {
+  width: 199px;
+  @media (max-width: 1600px) {
+    width: 100px;
+  }
+}
+
 .navBarLink {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  gap: 96px;
+}
+.navBarIconButtons {
   display: flex;
   justify-content: flex-start;
   align-items: center;

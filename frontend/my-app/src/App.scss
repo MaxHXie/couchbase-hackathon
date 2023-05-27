@@ -38,10 +38,3 @@
   align-items: center;
   width: 100%;
 }
-
-//The following class is used to set navbar and footer padding to be
-//the same as other full page-width sections
-.standardPaddingSection {
-  padding-left: var(--standard-page-padding);
-  padding-right: var(--standard-page-padding);
-}

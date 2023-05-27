@@ -1,0 +1,66 @@
+.iconButton {
+  margin: 0px;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  img,
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  &.enormous {
+    width: 48px;
+    height: 48px;
+  }
+  &.huge {
+    height: 40px;
+    width: 40px;
+  }
+  &.large {
+    width: 32px;
+    height: 32px;
+  }
+  &.small {
+    width: 16px;
+    height: 16px;
+  }
+  &.tiny {
+    width: 8px;
+    height: 8px;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transition: opacity 300ms;
+      opacity: 0.8;
+    }
+  }
+  &:active {
+    transition: opacity 0s;
+    opacity: 0.6;
+  }
+  &.selected {
+    padding: 2px;
+    background-color: var(--color-neutral-d);
+    border: 1px solid var(--color-accent);
+  }
+  &:disabled,
+  &[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  &.iconAnimation1 {
+    img,
+    svg {
+      transition: all 0.2s ease-in-out;
+      transform: translateY(0px);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      img:hover {
+        transform: translateY(-4px);
+      }
+    }
+  }
+}
