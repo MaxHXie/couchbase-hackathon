@@ -12,7 +12,7 @@
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 1px;
-  color: var(--color-neutral-e);
+  color: var(--color-neutral-b);
   border: none;
   border-radius: 4px;
   gap: 8px;
@@ -23,7 +23,7 @@
     width: 24px;
   }
   &.textVariantA {
-    color: var(--color-neutral-a);
+    color: var(--color-white);
   }
   &.hugeText {
     width: 236px;
@@ -131,11 +131,11 @@
     background-color: transparent;
   }
   &.outlineNeutralC {
-    border: 1px solid var(--color-neutral-c);
+    border: 1px solid var(--color-neutral-a);
     background-color: transparent;
   }
   &.outlineNeutralE {
-    border: 1px solid var(--color-neutral-e);
+    border: 1px solid var(--color-neutral-a);
     background-color: transparent;
   }
   &.textCta {
@@ -145,22 +145,10 @@
     color: var(--color-cta-content);
   }
   &.textNeutralA {
-    color: var(--color-neutral-a);
+    color: var(--color-neutral-b);
   }
   &.textNeutralB {
     color: var(--color-neutral-b);
-  }
-  &.textNeutralC {
-    color: var(--color-neutral-c);
-  }
-  &.textNeutralD {
-    color: var(--color-neutral-d);
-  }
-  &.textNeutralE {
-    color: var(--color-neutral-e);
-  }
-  &.textNeutralF {
-    color: var(--color-neutral-f);
   }
   &.backgroundCta {
     background-color: var(--color-cta);
@@ -177,18 +165,6 @@
   &.backgroundNeutralB {
     background-color: var(--color-neutral-b);
   }
-  &.backgroundNeutralC {
-    background-color: var(--color-neutral-c);
-  }
-  &.backgroundNeutralD {
-    background-color: var(--color-neutral-d);
-  }
-  &.backgroundNeutralE {
-    background-color: var(--color-neutral-e);
-  }
-  &.backgroundNeutralF {
-    background-color: var(--color-neutral-f);
-  }
   &.square {
     border-radius: 0px;
   }
@@ -200,9 +176,6 @@
   }
   &.noMargin {
     margin: 0px;
-  }
-  &.borderNeutralE {
-    border: 1px solid var(--color-neutral-e);
   }
   &.naked {
     background-color: transparent;
@@ -227,7 +200,7 @@
   }
   &:disabled,
   &[disabled] {
-    color: var(--color-neutral-f);
+    color: var(--color-neutral-b);
     background-color: #bbbbbb;
     border: unset;
     cursor: not-allowed;
