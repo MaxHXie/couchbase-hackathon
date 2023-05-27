@@ -18,7 +18,9 @@ const LandingPage = () => {
         placeholder={"Search for events"}
       />
       <div className="eventList">
-        <EventCard />
+        {Array.from(Array(10)).map((i) => (
+          <EventCard />
+        ))}
       </div>
     </div>
   )

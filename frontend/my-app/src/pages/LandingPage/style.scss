@@ -3,7 +3,7 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: calc(100vh - var(--navbar-height));
+  min-height: calc(100vh - var(--navbar-height));
   background-color: var(--color-secondary);
   padding-top: 48px;
   .eventList {
@@ -11,5 +11,7 @@
     align-items: center;
     padding: 24px 0px;
     overflow-y: auto;
+    gap: 8vw;
+    flex-wrap: wrap;
   }
 }
