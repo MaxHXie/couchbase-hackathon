@@ -1,0 +1,63 @@
+type VenueContent {
+    _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input VenueContentInput {
+  _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input VenueContentPatchInput {
+  _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input VenuesListFiltersInput {
+  _REPLACE_WITH_YOUR_FILTERS: String
+}
+
+
+type Venue {
+  id: ID!
+  content: VenueContent!
+}
+
+input VenueReplaceInput {
+  id: ID!
+  content: VenueContentInput!
+}
+
+input VenuePatchInput {
+  id: ID!
+  content: VenueContentPatchInput!
+}
+
+type VenuesResponse {
+  records: [Venue]!
+  errors: [ErrorResponse]!
+}
+
+type VenuesDeleteResponse {
+  deletedIds: [ID]!
+  errors: [ErrorResponse]!
+}
+
+type VenuesListResponse {
+  code: Int
+  message: String!
+  records: [Venue]
+}
+
+input VenuesListInput {
+  filters: VenuesListFiltersInput
+}
+
+type Mutation {
+  venuesCreate(contents: [VenueContentInput]!): VenuesResponse
+  venuesPatch(records: [VenuePatchInput]!): VenuesResponse
+  venuesReplace(records: [VenueReplaceInput]!): VenuesResponse
+  venuesDelete(ids: [ID]!): VenuesDeleteResponse
+}
+
+type Query {
+  venuesGetByIds(ids: [ID!]!): VenuesResponse
+  venuesList(query: VenuesListInput): VenuesListResponse
+}

@@ -1,0 +1,63 @@
+type TransactionContent {
+    _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input TransactionContentInput {
+  _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input TransactionContentPatchInput {
+  _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input TransactionsListFiltersInput {
+  _REPLACE_WITH_YOUR_FILTERS: String
+}
+
+
+type Transaction {
+  id: ID!
+  content: TransactionContent!
+}
+
+input TransactionReplaceInput {
+  id: ID!
+  content: TransactionContentInput!
+}
+
+input TransactionPatchInput {
+  id: ID!
+  content: TransactionContentPatchInput!
+}
+
+type TransactionsResponse {
+  records: [Transaction]!
+  errors: [ErrorResponse]!
+}
+
+type TransactionsDeleteResponse {
+  deletedIds: [ID]!
+  errors: [ErrorResponse]!
+}
+
+type TransactionsListResponse {
+  code: Int
+  message: String!
+  records: [Transaction]
+}
+
+input TransactionsListInput {
+  filters: TransactionsListFiltersInput
+}
+
+type Mutation {
+  transactionsCreate(contents: [TransactionContentInput]!): TransactionsResponse
+  transactionsPatch(records: [TransactionPatchInput]!): TransactionsResponse
+  transactionsReplace(records: [TransactionReplaceInput]!): TransactionsResponse
+  transactionsDelete(ids: [ID]!): TransactionsDeleteResponse
+}
+
+type Query {
+  transactionsGetByIds(ids: [ID!]!): TransactionsResponse
+  transactionsList(query: TransactionsListInput): TransactionsListResponse
+}

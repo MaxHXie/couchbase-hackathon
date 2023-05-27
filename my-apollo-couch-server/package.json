@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "my-apollo-couch-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,13 @@
     "generate-graphql-types": "graphql-codegen --config codegen.ts",
     "generate-resource": "generate-resource"
   },
+  "keywords": [],
   "author": "max_blankt <max@blankt.com>",
   "license": "MIT",
   "dependencies": {
-    "@faker-js/faker": "^8.0.1",
     "apollo-couch": "^0.0.6",
     "couchbase": "^4.2.4",
-    "graphql": "^16.6.0",
-    "ts-node": "^10.9.1"
+    "graphql": "^16.6.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^4.0.0",

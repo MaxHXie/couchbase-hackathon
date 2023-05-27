@@ -1,0 +1,63 @@
+type ArtistContent {
+    _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input ArtistContentInput {
+  _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input ArtistContentPatchInput {
+  _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input ArtistsListFiltersInput {
+  _REPLACE_WITH_YOUR_FILTERS: String
+}
+
+
+type Artist {
+  id: ID!
+  content: ArtistContent!
+}
+
+input ArtistReplaceInput {
+  id: ID!
+  content: ArtistContentInput!
+}
+
+input ArtistPatchInput {
+  id: ID!
+  content: ArtistContentPatchInput!
+}
+
+type ArtistsResponse {
+  records: [Artist]!
+  errors: [ErrorResponse]!
+}
+
+type ArtistsDeleteResponse {
+  deletedIds: [ID]!
+  errors: [ErrorResponse]!
+}
+
+type ArtistsListResponse {
+  code: Int
+  message: String!
+  records: [Artist]
+}
+
+input ArtistsListInput {
+  filters: ArtistsListFiltersInput
+}
+
+type Mutation {
+  artistsCreate(contents: [ArtistContentInput]!): ArtistsResponse
+  artistsPatch(records: [ArtistPatchInput]!): ArtistsResponse
+  artistsReplace(records: [ArtistReplaceInput]!): ArtistsResponse
+  artistsDelete(ids: [ID]!): ArtistsDeleteResponse
+}
+
+type Query {
+  artistsGetByIds(ids: [ID!]!): ArtistsResponse
+  artistsList(query: ArtistsListInput): ArtistsListResponse
+}
