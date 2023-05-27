@@ -3,4 +3,31 @@
   height: 343px;
   background-color: var(--color-white);
   border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+  .titleAndState {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    .availability {
+      background-color: var(--color-primary);
+      width: 154px;
+      height: 52px;
+      border-radius: 12px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+    }
+  }
 }
