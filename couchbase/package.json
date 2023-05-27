@@ -1,0 +1,14 @@
+{
+  "name": "couchbase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "max_blankt <max@blankt.com>",
+  "license": "MIT",
+  "dependencies": {
+    "couchbase": "^4.2.4"
+  }
+}
