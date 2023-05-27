@@ -8,7 +8,7 @@ const LandingPage = () => {
     navigate(`/marketplace/products?s=${searchInputElement}`)
   }
   return (
-    <div className="landingPage">
+    <div className="landingPage standardPaddingSection">
       <SearchComponent
         parentComponent="NavBar"
         onSubmit={searchOnSubmit}

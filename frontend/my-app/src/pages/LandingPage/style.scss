@@ -3,5 +3,7 @@
   flex-direction: column;
   position: relative;
   width: 100%;
+  height: calc(100vh - var(--navbar-height));
   background-color: var(--color-secondary);
+  padding-top: 48px;
 }

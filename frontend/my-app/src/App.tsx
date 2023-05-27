@@ -6,7 +6,7 @@ import LandingPage from "./pages/LandingPage"
 
 function App() {
   return (
-    <div className="pageContainer" style={{ height: "100%" }}>
+    <div className="pageContainer">
       <div className="pageHeader">
         <NavBar />
       </div>
@@ -14,9 +14,6 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
         </Routes>
-      </div>
-      <div className="pageFooter">
-        <Footer />
       </div>
     </div>
   )

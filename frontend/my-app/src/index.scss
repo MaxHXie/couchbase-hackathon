@@ -50,7 +50,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 300px;
   min-height: 100vh;
 }
 
@@ -82,9 +82,9 @@ button:focus-visible {
     height: 3px;
   }
   &::-webkit-scrollbar-track-piece {
-    background: var(--color-neutral-d);
+    background: var(--color-neutral-a);
   }
   &::-webkit-scrollbar-thumb {
-    background: var(--color-neutral-c);
+    background: var(--color-neutral-b);
   }
 }
