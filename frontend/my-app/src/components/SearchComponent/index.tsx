@@ -6,6 +6,7 @@ import { ChangeEvent, KeyboardEvent, useState, useRef, useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
 import { getStorage, setStorage } from "../../utils/storage"
 import PrimaryButton from "../buttons/PrimaryButton"
+import SearchIcon from "../../static/icons/searchIcon.svg"
 
 type Props = {
   parentComponent: string
@@ -317,11 +318,12 @@ const SearchComponent = ({
       >
         <div className="searchBarContentLeft">
           <img
-            src="searchIcon"
+            src={SearchIcon}
             alt="searchIcon"
             className={`searchIcon inside${parentComponent} searchBarContentLeftIcon${
               hasTypedTextInSearchInput ? "Focused" : ""
             }`}
+            style={{ marginLeft: "4px", marginRight: "4px" }}
           />
           <input
             className={`searchInput inside${parentComponent}`}
