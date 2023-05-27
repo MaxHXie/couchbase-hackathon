@@ -13,6 +13,7 @@
   "author": "max_blankt <max@blankt.com>",
   "license": "MIT",
   "dependencies": {
+    "@faker-js/faker": "^8.0.1",
     "apollo-couch": "^0.0.6",
     "couchbase": "^4.2.4",
     "graphql": "^16.6.0"
