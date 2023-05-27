@@ -12,7 +12,7 @@
 .pageHeader {
   position: absolute;
   top: 0;
-  z-index: calc(var(--platform-z-index) + 2);
+  z-index: 1;
   width: calc(
     100% - 3px
   ); // full page width minus scrollbar-width CONST-SKA-221
@@ -32,8 +32,6 @@
 }
 
 .pageContent {
-  background-color: var(--random-color);
-  // margin-top: var(--navbar-height); //refer to CONST-HLK-852
   padding-top: var(--navbar-height); //refer to CONST-HLK-852
   display: flex;
   flex-direction: column;

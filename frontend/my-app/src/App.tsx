@@ -1,15 +1,12 @@
 import "./App.scss"
 import { Route, Routes } from "react-router-dom"
 import NavBar from "./components/NavBar"
-import Footer from "./components/Footer"
+import { Footer } from "./components/Footer"
+import LandingPage from "./pages/LandingPage"
 
 function App() {
   return (
-    <div
-      className="pageContainer"
-      id="pageContainer"
-      style={{ height: "100%" }}
-    >
+    <div className="pageContainer" style={{ height: "100%" }}>
       <div className="pageHeader">
         <NavBar />
       </div>

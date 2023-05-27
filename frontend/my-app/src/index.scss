@@ -1,4 +1,4 @@
-body {
+#root {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   font-synthesis: none;
@@ -13,6 +13,7 @@ body {
   --color-cta: #ff9900;
   --color-neutral-a: #333;
   --color-neutral-b: #ccc;
+  --navbar-height: 113px;
 
   --standard-page-padding: 12vw; //CONST-GGD-934
   --visual-viewport-height: 100vh;
@@ -71,4 +72,19 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 3px; //CONST-SKA-221
+    height: 3px;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: var(--color-neutral-d);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-c);
+  }
 }
