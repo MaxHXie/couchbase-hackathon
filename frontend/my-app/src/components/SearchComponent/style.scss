@@ -14,11 +14,11 @@
   animation-play-state: paused;
 
   @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      transition: all 0.3s ease-out;
-      background: var(--color-neutral-d);
-      border: 2px solid var(--color-accent);
-    }
+    // &:hover {
+    //   transition: all 0.3s ease-out;
+    //   background: var(--color-neutral-d);
+    //   border: 2px solid var(--color-accent);
+    // }
   }
 
   &Content {
@@ -36,6 +36,7 @@
       color: var(--color-neutral-a);
       width: 100%;
       height: 100%;
+      font-size: 24px;
     }
     &Left {
       display: flex;
