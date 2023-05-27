@@ -1,12 +1,6 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+body {
+  font-family: "Karla", sans-serif;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +13,28 @@
   --color-cta: #ff9900;
   --color-neutral-a: #333;
   --color-neutral-b: #ccc;
+
+  --standard-page-padding: 12vw; //CONST-GGD-934
+  --visual-viewport-height: 100vh;
+  @media (max-width: 1600px) {
+    --standard-page-padding: 8vw;
+  }
+  @media (max-width: 1280px) {
+    --standard-page-padding: 100px;
+  }
+  @media (max-width: 960px) {
+    --standard-page-padding: 70px;
+  }
+  @media (max-width: 768px) {
+    --standard-page-padding: 48px;
+  }
+  @media (max-width: 480px) {
+    --standard-page-padding: 24px;
+  }
+}
+.standardPaddingSection {
+  padding-left: var(--standard-page-padding);
+  padding-right: var(--standard-page-padding);
 }
 
 a {
@@ -43,18 +59,14 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
