@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import SearchComponent from "../../components/SearchComponent"
 import "./style.scss"
+import EventCard from "../../components/EventCard"
 
 const LandingPage = () => {
   const navigate = useNavigate()
@@ -16,6 +17,9 @@ const LandingPage = () => {
         autoCompleteDictionary={[]}
         placeholder={"Search for events"}
       />
+      <div className="eventList">
+        <EventCard />
+      </div>
     </div>
   )
 }

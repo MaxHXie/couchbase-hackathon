@@ -6,4 +6,10 @@
   height: calc(100vh - var(--navbar-height));
   background-color: var(--color-secondary);
   padding-top: 48px;
+  .eventList {
+    display: flex;
+    align-items: center;
+    padding: 24px 0px;
+    overflow-y: auto;
+  }
 }
