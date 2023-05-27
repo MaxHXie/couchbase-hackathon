@@ -317,7 +317,7 @@ const SearchComponent = ({
       >
         <div className="searchBarContentLeft">
           <img
-            src=""
+            src="searchIcon"
             alt="searchIcon"
             className={`searchIcon inside${parentComponent} searchBarContentLeftIcon${
               hasTypedTextInSearchInput ? "Focused" : ""
