@@ -1,0 +1,55 @@
+{
+    "type": "venue",
+    "id": string (8 characters),
+    "venueType": "stadium" | "arena" | "theater" | "club" | "outdoor" | "other",  
+    "name": string (maximum 64 characters),
+    "description": string (maximum 512 characters),
+    "address": string (maximum 64 characters),
+    "seatingCapacity": integer number (minimum 100 maximum 100000),
+    "events": array of event ids,
+}
+
+{
+    "type": "event",
+    "id": string (8 characters),
+    "venueId": string (8 characters),
+    "artistIds": array of artist ids (minimum 1 maximum 50),
+    "name": string (maximum 64 characters),
+    "description": string (maximum 512 characters),
+    "dateTime": string (ISO 8601 date),
+    "popularity": integer number (minimum 0 maximum 100),
+    "tickets": [
+        {
+            "type": "general",
+            "price": integer number (minimum 10 maximum 300),
+            "availableQuantity": integer number (minimum 1 maximum equal to event seating capacity)
+        }, ...
+    ]
+}
+
+{
+    "type": "artist",
+    "id": string (8 characters),
+    "name": string (maximum 64 characters),
+    "description": string (maximum 512 characters),
+    "genre": array of genres ("rock" | "pop" | "jazz" | "hip-hop" | "edm" | "classical" | "rap" | "other"),
+    "popularity": integer number (minimum 0 maximum 100),
+    "events": array of event ids,
+}
+
+{
+    "type": "transaction",
+    "id": string (8 characters),
+    "eventId": string (8 characters),
+    "userId": string (8 characters),
+    "tickets": [
+        {
+            "type": "general",
+            "quantity": integer number (minimum 1 maximum 10)
+        }, ...
+    ],
+    "totalPrice": sum of ticket prices,
+    "dateTime": string (ISO 8601 date),
+    "status": "pending" | "completed" | "cancelled",
+    "paymentMethod": "creditCard" | "paypal" | "cash" | "applePay" | "googlePay" | "klarna",
+}

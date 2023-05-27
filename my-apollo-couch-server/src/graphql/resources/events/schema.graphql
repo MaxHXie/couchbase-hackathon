@@ -1,0 +1,63 @@
+type EventContent {
+    _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input EventContentInput {
+  _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input EventContentPatchInput {
+  _REPLACE_WITH_YOUR_FIELDS: String
+}
+
+input EventsListFiltersInput {
+  _REPLACE_WITH_YOUR_FILTERS: String
+}
+
+
+type Event {
+  id: ID!
+  content: EventContent!
+}
+
+input EventReplaceInput {
+  id: ID!
+  content: EventContentInput!
+}
+
+input EventPatchInput {
+  id: ID!
+  content: EventContentPatchInput!
+}
+
+type EventsResponse {
+  records: [Event]!
+  errors: [ErrorResponse]!
+}
+
+type EventsDeleteResponse {
+  deletedIds: [ID]!
+  errors: [ErrorResponse]!
+}
+
+type EventsListResponse {
+  code: Int
+  message: String!
+  records: [Event]
+}
+
+input EventsListInput {
+  filters: EventsListFiltersInput
+}
+
+type Mutation {
+  eventsCreate(contents: [EventContentInput]!): EventsResponse
+  eventsPatch(records: [EventPatchInput]!): EventsResponse
+  eventsReplace(records: [EventReplaceInput]!): EventsResponse
+  eventsDelete(ids: [ID]!): EventsDeleteResponse
+}
+
+type Query {
+  eventsGetByIds(ids: [ID!]!): EventsResponse
+  eventsList(query: EventsListInput): EventsListResponse
+}
