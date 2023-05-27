@@ -4,7 +4,7 @@ import EventImage from "../../static/icons/eventImg.png"
 const EventCard = () => {
   return (
     <div className="cardContainer">
-      <div className="title"></div>
+      <div className="title">Event Title</div>
       <div className="image">
         <img src={EventImage} alt="" />
       </div>
