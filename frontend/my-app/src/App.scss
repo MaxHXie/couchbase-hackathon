@@ -1,0 +1,53 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
+  background-color: var(--color-background);
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.pageHeader {
+  position: absolute;
+  top: 0;
+  z-index: calc(var(--platform-z-index) + 2);
+  width: calc(
+    100% - 3px
+  ); // full page width minus scrollbar-width CONST-SKA-221
+  &.onPageScroll {
+    nav {
+      margin-top: 0;
+      .logoNavBar {
+        height: 22px !important; //keep it the same as CONST-JJE-384
+      }
+      button {
+        font-size: 12px !important;
+        line-height: 14px !important;
+        font-weight: 400 !important;
+      }
+    }
+  }
+}
+
+.pageContent {
+  background-color: var(--random-color);
+  // margin-top: var(--navbar-height); //refer to CONST-HLK-852
+  padding-top: var(--navbar-height); //refer to CONST-HLK-852
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.pageFooter {
+  width: 100%;
+}
+
+//The following class is used to set navbar and footer padding to be
+//the same as other full page-width sections
+.standardPaddingSection {
+  padding-left: var(--standard-page-padding);
+  padding-right: var(--standard-page-padding);
+}
