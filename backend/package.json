@@ -3,12 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config src/index.ts",
+    "generate-graphql-types": "graphql-codegen --config codegen.ts",
+    "generate-resource": "generate-resource"
   },
   "author": "max_blankt <max@blankt.com>",
   "license": "MIT",
   "dependencies": {
-    "apollo-couch": "0.0.6"
+    "apollo-couch": "^0.0.6",
+    "couchbase": "^4.2.4",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^4.0.0",
+    "@graphql-codegen/typescript-resolvers": "^4.0.0",
+    "@types/node": "^20.2.5",
+    "eslint": "^8.41.0",
+    "nodemon": "^2.0.22"
   }
 }
